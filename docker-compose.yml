@@ -17,9 +17,9 @@ services:
     ports:
       - "8052:8052"
     environment:
-      - MONGODB_URI: mongodb://mongodb_container:27017/mydb
-      - MONGODB_STATUS_HOST: mongodb_container
-      - MONGODB_STATUS_PORT: "27017"
+      - MONGODB_URI=mongodb://mongodb_container:27017/mydb
+      - MONGODB_STATUS_HOST=mongodb_container
+      - MONGODB_STATUS_PORT="27017"
 
 volumes:
   mongodb_data_container:

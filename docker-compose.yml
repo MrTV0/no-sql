@@ -1,4 +1,8 @@
 version: "3.9"
+
+networks:
+  data-service-network
+  
 services:
   mongodb_container:
     image: "mongo:latest"
@@ -10,6 +14,8 @@ services:
       - "27017:27017"
     volumes:
       - mongodb_data_container:/data/db
+    networks:
+      data-service-network
   
   review-service:
     depends_on:
@@ -17,8 +23,8 @@ services:
     image: miverboven/review-service-ex
     ports:
       - "8052:8052"
-    links:
-      - "mongodb_container:database"
+    networks:
+      data-service-network
 
 volumes:
   mongodb_data_container:

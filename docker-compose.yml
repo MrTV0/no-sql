@@ -17,8 +17,8 @@ services:
     image: miverboven/review-service-ex
     ports:
       - "8052:8052"
-    environment:
-      - SPRING_DATASOURCE_URL=jdbc:mongodb://mongodb_container:27017/database
+    links:
+      - "mongodb_container:database"
 
 volumes:
   mongodb_data_container:

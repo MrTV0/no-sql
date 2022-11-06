@@ -15,7 +15,7 @@ services:
       - mongodb_container
     image: miverboven/review-service-ex
     ports:
-      - '8051:8051'
+      - '8052:8052'
     environment:
       - MONGODB_URI: mongodb://mongodb_container:27017/mydb
       - MONGODB_STATUS_HOST: mongodb_container

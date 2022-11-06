@@ -17,7 +17,7 @@ services:
     ports:
       - "8052:8052"
     environment:
-      - MONGO_URL=mongodb://mongodb_container:27017/db
+      - MONGO_URL=mongodb://mongodb_container:27017
 
 volumes:
   mongodb_data_container:
